@@ -1,0 +1,17 @@
+{
+  "name": "ai-nodejs",
+  "version": "1.0.0",
+  "description": "AI with nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.83.0"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2"
+  }
+}
