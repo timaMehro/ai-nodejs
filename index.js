@@ -1,4 +1,4 @@
-import { OpenAI } from './openai.js'
+import { openai } from './openai.js'
 
 const result = await openai.chat.completions.create({
   // The model you choose influences output and impacts cost.

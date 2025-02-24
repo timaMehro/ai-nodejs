@@ -6,8 +6,11 @@ You need to have an account on https://platform.openai.com/
 
 ```sh
 # Install OpenAI API package
-npm install openai
+npm i openai
 
 # Install dotenv to use .env file
-npm install dotenv
+npm i dotenv
+
+# Install langchain
+npm i langchain
 ```
