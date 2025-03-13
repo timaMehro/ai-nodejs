@@ -1,7 +1,13 @@
 import { openai } from './openai.js'
+import { MemoryVectorStore } from 'langchain/vectorstores/memory'
+import { OpenAIEmbeddings } from '@langchain/openai'
 
-export const formatUserInput = (userInput) => ({ role: 'user', content: userInput })
+export const formatUserInput = (userInput) => ({
+  role: 'user',
+  content: userInput,
+})
 
+// Create New Message:
 export const createNewMessage = async (history, message) => {
   const chatCompletion = await openai.chat.completions.create({
     messages: [...history, message],
@@ -10,4 +16,9 @@ export const createNewMessage = async (history, message) => {
   })
 
   return chatCompletion.choices[0].message
+}
+
+// Create Memory Vector Store:
+export const createMemoryVectorStore = (document) => {
+  return MemoryVectorStore.fromDocuments(document, new OpenAIEmbeddings())
 }

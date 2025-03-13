@@ -13,4 +13,7 @@ npm i dotenv
 
 # Install langchain
 npm i langchain
+
+# For document QA
+npm i pdf-parse youtube-transcript youtubei.js
 ```
